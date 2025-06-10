@@ -15,12 +15,13 @@ import {
 } from '@mui/material';
 import { useDispatch, useSelector } from 'react-redux';
 import {addComment} from '../../store/commentSlice'
+import { RootState } from '@/app/store/Store';
 
 
 const Comments: React.FC = () => {
 
 
-const comment=useSelector((state)=>state.comments.text)
+const comment=useSelector((state:RootState)=>state.comments.text)
  const dispatch=useDispatch()
   const [filterType, setFilterType] = useState<'specific' | 'any'>('specific');
   const [inputValue, setInputValue] = useState<string>('');

@@ -4,9 +4,10 @@ import Dm from "./LeftChild/Dm";
 import { Button } from "@mui/joy";
 import { useDispatch, useSelector } from "react-redux";
 import { updateState } from "../store/currentState";
+import { RootState } from "../store/Store";
 
 export default function Home() {
-  const currentState = useSelector((state) => state.current.current);
+  const currentState = useSelector((state:RootState) => state.current.current);
   const dispatch = useDispatch();
 
   const handleNext = () => {
@@ -15,7 +16,7 @@ export default function Home() {
     } else if (currentState === "comments") {
       dispatch(updateState("dm"));
     } else if (currentState === "dm") {
-      alert("next");
+      console.log("done");
     }
   };
 

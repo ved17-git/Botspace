@@ -2,9 +2,18 @@ import Instagram from "./RightChild/Instagram";
 import Tab from "./RightChild/Tab";
 import { Button } from "@mui/joy";
 import { useSelector } from "react-redux";
+import { RootState } from "../store/Store";
 
 export default function Right() {
-const done=useSelector((state)=>state.current.current)
+
+const dm=useSelector((state:RootState)=>state.dm.message)
+
+const handleDone=()=>{
+  if(dm){
+   alert("Done, Thank You")
+  }
+ 
+}
 
   return (
     <>
@@ -13,8 +22,8 @@ const done=useSelector((state)=>state.current.current)
       <Tab/>
 
       <div className="absolute top-0 right-0 p-5"> 
-     <Button variant={done === "dm" ? "solid" : "outlined"}>
-     Done
+    <Button variant={dm ? "solid" : "outlined"} onClick={handleDone} className={dm ? ""     :"hover:cursor-not-allowed pointer-events-none"}>
+      Done
      </Button>
 
       </div>

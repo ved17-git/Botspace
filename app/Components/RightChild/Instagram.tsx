@@ -14,6 +14,7 @@ import { useSelector } from 'react-redux';
 import Image from 'next/image';
 import CommentScreen from './CommentScreen';
 import DmScreen from './DmScreen';
+import { RootState } from "@/app/store/Store";
 
 
 
@@ -22,8 +23,8 @@ import DmScreen from './DmScreen';
 function Instagram() {
 
 
-const posts=useSelector((state)=>state.posts.selectedPost)
-const status=useSelector((state)=>state.current.current)
+const posts=useSelector((state:RootState)=>state.posts.selectedPost)
+const status=useSelector((state:RootState)=>state.current.current)
   
 
 

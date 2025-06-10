@@ -2,6 +2,8 @@ import React, { useEffect, useState } from "react";
 import { ToggleButtonGroup, ToggleButton } from "@mui/material";
 import { useSelector, useDispatch } from "react-redux";
 import { updateState } from "@/app/store/currentState";
+import { RootState } from "@/app/store/Store";
+
 
 function TabToggle() {
   const currentState = useSelector((state: RootState) => state.current.current);

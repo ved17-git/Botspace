@@ -5,10 +5,11 @@ import AccountCircleIcon from '@mui/icons-material/AccountCircle';
 import Image from "next/image";
 import logo from '../../../assets/b-logo.png'
 import { useSelector } from "react-redux";
+import { RootState } from "@/app/store/Store";
 
 function CommentScreen() {
 
-const comment=useSelector((state)=>state.comments.text)
+const comment=useSelector((state:RootState)=>state.comments.text)
 
   return (
     <>

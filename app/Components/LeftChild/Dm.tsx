@@ -1,13 +1,13 @@
 import React, { useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { addMessage } from '@/app/store/dmSlice';
-
+import { RootState } from '@/app/store/Store';
 
 
 
 const Dm = () => {
 
-  const dm=useSelector((state)=>state.dm.message)
+  const dm=useSelector((state:RootState)=>state.dm.message)
   
   const dispatch=useDispatch()
   console.log(dm);

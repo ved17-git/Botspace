@@ -12,13 +12,14 @@ import { LiaCommentDots } from "react-icons/lia";
 import { CiCirclePlus } from "react-icons/ci";
 import { FaCamera } from "react-icons/fa";
 import { useSelector } from "react-redux";
+import { RootState } from "@/app/store/Store";
 
 
 
 
 function DmScreen() {
 
- const dm=useSelector((state)=>state.dm.message)
+ const dm=useSelector((state:RootState)=>state.dm.message)
 
  
     
