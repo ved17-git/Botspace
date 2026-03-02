@@ -16,7 +16,9 @@ const Dm = () => {
   const [linkMessage, setLinkMessage] = useState<string>('');
   const [dmMessage, setDmMessage] = useState<string>(dm);
 
-  const handleToggleOpeningDm = (): void => {
+  const handleToggleOpeningDm = (e:React.MouseEventHandler<HTMLButtonElement>)=> {
+    console.log(e);
+    
     setIsOpeningDmEnabled(!isOpeningDmEnabled);
   };
 
