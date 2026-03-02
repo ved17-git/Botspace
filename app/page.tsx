@@ -9,10 +9,10 @@ export default function Home() {
   return ( <> 
     
 <div className="flex w-full h-screen overflow-hidden">
-  <Provider store={store}> 
-    <Left />
-    <Right />
-  </Provider>
+    <Provider store={store}> 
+      <Left />
+      <Right />
+    </Provider>
 </div>
 
     

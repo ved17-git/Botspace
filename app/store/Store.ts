@@ -10,7 +10,6 @@ export const store=configureStore({
         posts:postReducer,
         comments:commentReducer,
         dm:dmReducer,
-
         current:currentReducer,
     },
 })
